@@ -185,7 +185,7 @@ a{
 
 /* Custom bloc styling */
 
-#nav-bloc,#yimi1,#bloc-3,#bloc-4,#bloc-5,#bloc-6,#bloc-7,#bloc-8,#bloc-9,#yimi-order,#yimi-group,#yimi-our,#bloc-13,#bloc-14,#bloc-15,#bloc-16{
+#nav-bloc,#yimi1,#bloc-3,#bloc-4,#bloc-5,#bloc-6,#bloc-7,#bloc-8,#bloc-9,#bloc-10,#bloc-11,#yimi-group,#yimi-our,#bloc-14,#bloc-15,#bloc-16,#bloc-17{
 	background-color:#ffffff;
 }
 #hero-bloc{
@@ -196,9 +196,6 @@ a{
 }
 #hero-bloc h3{
 	font-size:30px;
-}
-#yimi-order h3{
-	line-height:50px;
 }
 
 /* Bloc image backgrounds */
