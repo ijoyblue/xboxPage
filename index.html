@@ -18,9 +18,7 @@
 <body>
 <!-- Main container -->
 <div class="page-container">
-    
-<!-- Hero Bloc -->
-<div id="hero-bloc" class="bloc hero bgc-2 bg-cornfield d-bloc animated pulse">
+    <!-- Hero Bloc --><div id="hero-bloc" class="bloc hero bg-cornfield bgc-1 d-bloc">
 	<div class="container bloc-sm hero-nav">
 		<nav class="navbar row">
 			<div class="navbar-header">
@@ -28,8 +26,23 @@
 					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
 			</div>
-			<div class="navbar-collapse navbar-1 collapse in">
-				<ul class="site-navigation nav pull-right">
+			<div class="navbar-collapse navbar-1 collapsing">
+				<ul class="site-navigation nav">
+					<li class="active">
+						<a class="ltc-1" href="index.html">首页</a>
+					</li>
+					<li class="active">
+						<a class="ltc-1" onclick="scrollToTarget('#yimi1')" id="pl-undefined">一米盒子</a>
+					</li>
+					<li class="active">
+						<a class="ltc-1" onclick="scrollToTarget('#yimi-order')" id="pl-undefined">立即订购</a>
+					</li>
+					<li class="active">
+						<a class="ltc-1" onclick="scrollToTarget('#yimi-group')" id="pl-undefined">一米团队</a>
+					</li>
+					<li class="active">
+						<a class="ltc-1" onclick="scrollToTarget('#yimi-our')" id="pl-undefined">加入我们</a>
+					</li>
 				</ul>
 			</div>
 		</nav>
@@ -37,33 +50,25 @@
 	<div class="v-center text-center">
 		<div class="vc-content">
 			<h1 class="">
-				一米 | 1MBox
+				一米盒子 | 1MBox
 			</h1>
 			<h3 class="">
-				你身边的便利超市
-			</h3><br /><br /><br /><a href="index.html" class="btn-wire btn btn-xl btn-lg">Get Started</a><a id="scroll-hero" class="btn-dwn" href="#"><span class="fa fa-chevron-down"></span></a>
+				让美味随时在身边
+			</h3><br /><br /><br /><a href="index.html" class="btn-wire btn btn-xl wire-btn-c-2">Get Started</a><a id="scroll-hero" class="btn-dwn" href="#"><span class="fa fa-chevron-down"></span></a>
 		</div>
 	</div>
-</div>
-<!-- Hero Bloc END -->
-
-<!-- bloc-2 -->
-<div class="bloc l-bloc " id="bloc-2">
-	<div class="container bloc-lg">
+</div><!-- Hero Bloc END --><!-- yimi1 --><div class="bloc l-bloc " id="yimi1">
+	<div class="container bloc-xl">
 		<div class="row">
 			<div class="col-sm-12">
-				<h2 class="text-center animated swing mg-lg sm-shadow">
+				<h2 class="text-center mg-lg lg-shadow animated bounceIn">
 					我们常有这样的抱怨
 				</h2>
 			</div>
 		</div>
 	</div>
-</div>
-<!-- bloc-2 END -->
-
-<!-- bloc-3 -->
-<div class="bloc bg-br-edge  l-bloc" id="bloc-3">
-	<div class="container bloc-lg">
+</div><!-- yimi1 END --><!-- bloc-3 --><div class="bloc bg-br-edge  l-bloc" id="bloc-3">
+	<div class="container">
 		<div class="row">
 			<div class="col-sm-4">
 				<img src="img/20090513120148_98.jpg" class="mg-sm" width="287" height="215" alt='' />
@@ -94,25 +99,17 @@
 			</div>
 		</div>
 	</div>
-</div>
-<!-- bloc-3 END -->
-
-<!-- bloc-4 -->
-<div class="bloc  l-bloc" id="bloc-4">
-	<div class="container bloc-lg">
+</div><!-- bloc-3 END --><!-- bloc-4 --><div class="bloc  l-bloc" id="bloc-4">
+	<div class="container bloc-md">
 		<div class="row voffset-lg animated swing animDelay02">
 			<div class="col-sm-12">
-				<h2 class="mg-md text-center sm-shadow">
+				<h2 class="mg-md text-center animated bounceIn lg-shadow">
 					<strong>有了一米盒子这些都不再是问题</strong>
 				</h2>
 			</div>
 		</div>
 	</div>
-</div>
-<!-- bloc-4 END -->
-
-<!-- bloc-5 -->
-<div class="bloc l-bloc " id="bloc-5">
+</div><!-- bloc-4 END --><!-- bloc-5 --><div class="bloc l-bloc " id="bloc-5">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-6">
@@ -131,11 +128,7 @@
 			</div>
 		</div>
 	</div>
-</div>
-<!-- bloc-5 END -->
-
-<!-- bloc-6 -->
-<div class="bloc l-bloc " id="bloc-6">
+</div><!-- bloc-5 END --><!-- bloc-6 --><div class="bloc l-bloc " id="bloc-6">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-6">
@@ -154,11 +147,7 @@
 			</div>
 		</div>
 	</div>
-</div>
-<!-- bloc-6 END -->
-
-<!-- bloc-7 -->
-<div class="bloc l-bloc " id="bloc-7">
+</div><!-- bloc-6 END --><!-- bloc-7 --><div class="bloc l-bloc " id="bloc-7">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-6">
@@ -177,11 +166,7 @@
 			</div>
 		</div>
 	</div>
-</div>
-<!-- bloc-7 END -->
-
-<!-- bloc-8 -->
-<div class="bloc l-bloc " id="bloc-8">
+</div><!-- bloc-7 END --><!-- bloc-8 --><div class="bloc l-bloc " id="bloc-8">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-6">
@@ -200,11 +185,7 @@
 			</div>
 		</div>
 	</div>
-</div>
-<!-- bloc-8 END -->
-
-<!-- bloc-9 -->
-<div class="bloc l-bloc " id="bloc-9">
+</div><!-- bloc-8 END --><!-- bloc-9 --><div class="bloc l-bloc " id="bloc-9">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-6">
@@ -223,64 +204,33 @@
 			</div>
 		</div>
 	</div>
-</div>
-<!-- bloc-9 END -->
-
-<!-- bloc-10 -->
-<div class="bloc l-bloc " id="bloc-10">
+</div><!-- bloc-9 END --><!-- yimi-order --><div class="bloc l-bloc " id="yimi-order">
 	<div class="container bloc-lg">
-		<div class="row">
-			<div class="col-xs-4 col-xs-offset-4">
-				<h2 class="mg-md text-center">
-					<strong>目标市场与规模</strong>
-				</h2>
-				<p class="text-left">
-					一米现阶段主要瞄准高校市场，主要原因在于，首先大学生群体每天有较长时间呆在室内，在寝室里不管是娱乐还是学习对于各种快消品，例如零食、牛奶、饮料等的消费都是刚需。其次此类需求最旺盛的时间段往往是晚上以及早晨，而这个时间段往往疲于上下奔走，夜间再迟一点便利店也会关门那就更无处购买，因此正是懒人经济需求旺盛的一点。最后高校大学生用户分布密集，往往一个城市大部分高校都相依而建形成一个大学城，这样即节省了物流成本也节省了推广成本。在市场规模上，据不完全统计调查显示，全国高校已到2600所，全国大学生人数约5000万，覆盖年龄段18岁到25岁，有着巨大市场延伸能力以及旺盛的购买力。据调查，高校生的消费开支，包括教育费用、娱乐休闲、交友的费用，平均每人每年4000元，这就意味着有2000多亿的高校市场。
-				</p>
+		<div class="col-xs-2 col-xs-offset-5">
+			<div class="divider-h">
+				<span class="divider"></span>
 			</div>
+			<h2 class="mg-lg text-center lg-shadow animDelay02 animated bounceIn">
+				立即订购
+			</h2><img src="img/mmqrcode1439265797505.png" class="img-responsive img-circle" alt='' />
 		</div>
-	</div>
-</div>
-<!-- bloc-10 END -->
-
-<!-- bloc-11 -->
-<div class="bloc l-bloc " id="bloc-11">
-	<div class="container bloc-lg">
-		<div class="row">
-			<div class="col-xs-4 col-xs-offset-4">
-				<h2 class="mg-md text-center">
-					<strong>盈利模式</strong>
-				</h2>
-				<p class="text-left">
-					常见快消品的利润率一般在20%到30%之间。通过这部分的利润往往可以抵消掉公司的物流及人力成本。但是因为快消品高频度的需求。在大量接入用户后，通过高频低利商品带动低频高利商品的消费来进行盈利。例如进口食品或水果等，这些类别商品的利润往往在50%以上。此外，因为一米盒子本来信用消费的特点，可以为用户提供金融服务，例如分期购买或大学生借贷服务等，进行更高层次的盈利模式升级。
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-11 END -->
-
-<!-- bloc-12 -->
-<div class="bloc l-bloc " id="bloc-12">
-	<div class="container bloc-lg">
 		<div class="col-sm-12 col-md-8 col-md-offset-2">
-			<h3 class=" text-left text-center">
-				<i>“</i> We do not remember days, we remember moments"
+			<h3 class="text-center ">
+				<i>扫描上面二维码<br />添加“一米君”为好友<br />告诉一米君你的位置<br />一米君和一米盒子就飞奔过来啦</i>
 			</h3>
 			<p class="text-center">
-				Cesare Pavese
+				<strong>*目前只服务于浙江大学紫荆港校区</strong>
 			</p>
 		</div>
 	</div>
-</div>
-<!-- bloc-12 END -->
-
-<!-- bloc-13 -->
-<div class="bloc l-bloc " id="bloc-13">
+</div><!-- yimi-order END --><!-- yimi-group --><div class="bloc l-bloc " id="yimi-group">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-12">
-				<h2 class="text-center mg-md">
+				<div class="divider-h">
+					<span class="divider"></span>
+				</div>
+				<h2 class="text-center mg-md lg-shadow animated bounceIn">
 					一米团队
 				</h2>
 			</div>
@@ -297,7 +247,7 @@
 					负责产品设计以及技术开发
 				</p>
 				<p>
-					浙江大学计算机学院2012级硕士。初中时获得全国计算机奥林匹克竞赛四川赛区二等奖，雅安赛区一等奖。本科期间获得校电子设计大赛一等奖，毕昇杯电子设计大赛全国二等奖。研究生期间以第一作者身份发表两篇智能计算相关论文。是浙江大学第一届创新创业培训班学员(移动互联网领域)。2014年曾加入尾巴旅行创业团队，在该团队中从事产品与运营工作。
+					浙江大学计算机学院2012级硕士。初中时获得全国计算机奥林匹克竞赛四川赛区二等奖，雅安赛区一等奖。浙江大学第一届创新创业培训班学员(移动互联网领域)。2014年曾加入尾巴旅行创业团队。
 				</p><br /><a href="index.html" target="_blank"><span class="fa fa-twitter icon-sm pull-left"></span></a><a href="index.html" target="_blank"><span class="fa fa-facebook icon-sm pull-left"></span></a><a href="index.html" target="_blank"><span class="fa fa-dribbble icon-sm pull-left"></span></a>
 			</div>
 			<div class="col-sm-2">
@@ -308,10 +258,10 @@
 					薛晓伟
 				</h3>
 				<p>
-					负责运营推广与技术开发
+					负责运营推广
 				</p>
 				<p class="text-left">
-					浙江大学计算机学院2011级博士。本科期间获得全国‘挑战杯大学生创业大赛&rsquo;二等奖，在校期间成功运营打印社两年，熟悉传统运营及渠道管理，并积累了大量校园运营推广经验。后来被保送浙江大学攻读博士学位，先后发表多篇机器学习论文，专注于算法设计及应用。是第六届浙江大学素拓班学员。
+					浙江大学计算机学院2011级博士。本科期间获得全国‘挑战杯大学生创业大赛&rsquo;二等奖。后来被保送浙江大学攻读博士学位，先后发表多篇机器学习论文，专注于算法设计及应用。是第六届浙江大学素拓班学员。
 				</p><br /><a href="index.html" target="_blank"><span class="fa fa-twitter icon-sm pull-left"></span></a><a href="index.html" target="_blank"><span class="fa fa-facebook icon-sm pull-left"></span></a><a href="index.html" target="_blank"><span class="fa fa-dribbble icon-sm pull-left"></span></a>
 			</div>
 		</div>
@@ -327,7 +277,7 @@
 					负责运营推广
 				</p>
 				<p>
-					浙江大学光华法学院2013级研究生。浙江大学未来企业家俱乐部创新创业班第八届学院。曾在杭州著名律师事务所实习，帮助企业进行上市前的法务准备工作。熟悉企业法务及财务运转工作。
+					浙江大学光华法学院2013级研究生。浙江大学未来企业家俱乐部创新创业班第八届学院。
 				</p><br /><a href="index.html" target="_blank"><span class="fa fa-twitter icon-sm pull-left"></span></a><a href="index.html" target="_blank"><span class="fa fa-facebook icon-sm pull-left"></span></a><a href="index.html" target="_blank"><span class="fa fa-dribbble icon-sm pull-left"></span></a>
 			</div>
 			<div class="col-sm-2">
@@ -346,11 +296,62 @@
 			</div>
 		</div>
 	</div>
-</div>
-<!-- bloc-13 END -->
-
-<!-- Footer - bloc-14 -->
-<div class="bloc l-bloc " id="bloc-14">
+</div><!-- yimi-group END --><!-- yimi-our --><div class="bloc l-bloc " id="yimi-our">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="divider-h">
+					<span class="divider"></span>
+				</div>
+				<h2 class="mg-md text-center animated bounceIn lg-shadow">
+					加入我们
+				</h2>
+				<p class="text-center">
+					和我们一起，为美味负责，为便利负责，为惊喜负责！
+				</p>
+			</div>
+		</div>
+	</div>
+</div><!-- yimi-our END --><!-- Bloc Group --><div class='bloc-group'><!-- bloc-13 --><div class="bloc l-bloc  bloc-tile-3" id="bloc-13">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="mg-md">
+					学校市场专员
+				</h3>
+				<p>
+					负责本学校的一米盒子推广及用户调研工作。有提成，欢迎有兴趣的在校生联系我们。
+				</p>
+			</div>
+		</div>
+	</div>
+</div><!-- bloc-13 END --><!-- bloc-14 --><div class="bloc l-bloc  bloc-tile-3" id="bloc-14">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="mg-md">
+					工程师
+				</h3>
+				<p>
+					前端或后端工程师，熟悉web开发流程。有一定开发经验。负责一米后台开发，及移动端web app开发。可实习。
+				</p>
+			</div>
+		</div>
+	</div>
+</div><!-- bloc-14 END --><!-- bloc-15 --><div class="bloc l-bloc  bloc-tile-3" id="bloc-15">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="mg-md">
+					设计师
+				</h3>
+				<p>
+					喜欢设计构造事物，喜好简洁美丽的事物并有一定产品意识。你将负责一米盒子的设计或移动应用的UI及UX设计。可实习。
+				</p>
+			</div>
+		</div>
+	</div>
+</div><!-- bloc-15 END --></div><!-- Bloc Group END --><!-- Footer - bloc-16 --><div class="bloc l-bloc " id="bloc-16">
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-3">
@@ -359,20 +360,19 @@
 			<div class="col-sm-3">
 				<h3>
 					地址
-				</h3><a href="index.html" class="a-btn a-block">浙江省杭州市浙江大学玉泉校区曹光彪主楼616A</a>
+				</h3><a href="index.html" class="a-btn a-block ltc-1">浙江省杭州市文三路199号创业大厦</a>
 			</div>
 			<div class="col-sm-3">
 				<h3>
 					联系方式
-				</h3><a href="index.html" class="a-btn a-block">Email: yangying888@gmail.com</a><a href="index.html" class="a-btn a-block">Tel: 13735896641</a>
+				</h3><a href="index.html" class="a-btn a-block">Email: fadedblue@live.cn</a><a href="index.html" class="a-btn a-block">Tel: 13735896641</a>
 			</div>
 			<div class="col-sm-3">
 				<span class="empty-column"></span>
 			</div>
 		</div>
 	</div>
-</div>
-<!-- Footer - bloc-14 END -->
+</div><!-- Footer - bloc-16 END -->
 </div>
 <!-- Main container END -->
 

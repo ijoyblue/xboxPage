@@ -15,7 +15,17 @@ a:hover{text-decoration: none; cursor:pointer;}
 button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari */
 
 
-   
+a{
+	color:#060606!important;
+}
+
+ a:hover{
+	color:#060606!important;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+
 
 
 /* Globals type styling */
@@ -51,11 +61,42 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 
 /* Sizes */
 
+.bloc-xl{
+	padding:200px 50px;
+}
 .bloc-lg{
 	padding:100px 50px;
 }
+.bloc-md{
+	padding:50px;
+}
 .bloc-sm{
 	padding:20px 50px;
+}
+
+
+/* Group Styles */
+
+.bloc-group{
+	width:100%;
+	display:table;
+	table-layout: fixed;
+}
+.bloc-group .bloc{
+	display: table-cell;
+	vertical-align: top;
+}
+.bloc-tile-2{
+	width:50%;
+}
+.bloc-tile-3{
+	width:33.33333333%;
+}
+.bloc-tile-4{
+	width:25%;
+}
+.bloc-tile-2 .container, .bloc-tile-3 .container, .bloc-tile-4 .container{
+	width:100%;
 }
 
 
@@ -144,8 +185,11 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 
 /* Custom bloc styling */
 
-#hero-bloc,#nav-bloc,#bloc-2,#bloc-3,#bloc-4,#bloc-5,#bloc-6,#bloc-7,#bloc-8,#bloc-9,#bloc-10,#bloc-11,#bloc-12,#bloc-13,#bloc-14{
-	background-color:#fffcfc;
+#nav-bloc,#yimi1,#bloc-3,#bloc-4,#bloc-5,#bloc-6,#bloc-7,#bloc-8,#bloc-9,#yimi-order,#yimi-group,#yimi-our,#bloc-13,#bloc-14,#bloc-15,#bloc-16{
+	background-color:#ffffff;
+}
+#hero-bloc{
+	background-color:#060606;
 }
 #hero-bloc h1{
 	font-size:50px;
@@ -153,14 +197,17 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 #hero-bloc h3{
 	font-size:30px;
 }
-#bloc-12 h3{
-	font-size: 24px;
+#yimi-order h3{
+	line-height:50px;
 }
 
 /* Bloc image backgrounds */
 
 .bg-cornfield{
 	background-image:url("img/cornfield.jpg");
+}
+.bg-cornfield{
+	background-image:url('img/cornfield.jpg');
 }
 
 /* = NavBar
@@ -346,14 +393,34 @@ button{
 	text-align: left;
 }
 
+/* Button colour styles */
+
+.btn-c-2{
+	background:#ffffff;
+	color:rgba(0,0,0,.5)!important;
+}
+.btn-c-2:hover{
+	background:#cccccc;
+	color:rgba(0,0,0,.5)!important;
+}
+.wire-btn-c-2{
+	color:#ffffff!important;
+	border-color:#ffffff!important;
+}
 
 /* Link colour styles */
 
 .ltc-1{
-	color:#090303!important;
+	color:#060606!important;
 }
 .ltc-1:hover{
-	color:#070202!important;
+	color:#050505!important;
+}
+.ltc-2{
+	color:#ffffff!important;
+}
+.ltc-2:hover{
+	color:#cccccc!important;
 }
 
 /* = Icons
@@ -376,10 +443,23 @@ button{
 
 /* = Text & Icon Styles
 -------------------------------------------------------------- */
-.sm-shadow{
-	text-shadow:0 1px 2px rgba(0,0,0,.3);
+.lg-shadow{
+	text-shadow:0 2px 5px rgba(0,0,0,.5);
 }
 
+/* = Dividers
+-------------------------------------------------------------- */
+.divider-h{
+	padding:20px 0;
+}
+.divider-h span{
+	display: block;
+	border-top:1px solid transparent;
+}
+.divider-half{
+	width: 50%;
+	margin: 0 auto;
+}
 
 
 /* Empty space fillers - Used on empty blocs to fill them out */
