@@ -1,26 +1,45 @@
-// Startup Scripts
+// Loading page complete
+$(window).load(function()
+{
+	checkHero(); // Check hero height is correct
+	animateWhenVisable();  // Activate animation when visable	
+});
+
+// Page ready
 $(document).ready(function()
 {
-	$('.hero').css('height', ($(window).height() - $('header').outerHeight()) + 'px'); // Set hero to fill page height
-
+	$('.hero').css('height', $(window).height()+'px'); // Set initial hero height
 	$('#scroll-hero').click(function()
 	{
 		$('html,body').animate({scrollTop: $("#hero-bloc").height()}, 'slow');
 	});
 });
 
-// Animate when visable - initialized on load for Safari bug.
-$(window).load(function()
-{
-	animateWhenVisable();  // Activate animation when visable
-});
-
-
 // Window resize 
 $(window).resize(function()
-{
-	$('.hero').css('height', ($(window).height() - $('header').outerHeight()) + 'px'); // Refresh hero height  	
+{		
+	$('.hero').css('height',getHeroHeight()+'px'); // Refresh hero height  	
 }); 
+ 
+// Get Hero Height
+function getHeroHeight()
+{
+	var H = $(window).height(); // Window height
+	
+	if(H < heroBodyH) // If window height is less than content height
+	{
+		H = heroBodyH+100;
+	}
+	return H
+}
+
+// check hero height
+function checkHero()
+{
+	P = parseInt($('.hero-nav').css('padding-top'))*2
+	window.heroBodyH = $('.hero-nav').outerHeight()+P+$('.v-center').outerHeight()+50; // Set hero body height
+	$('.hero').css('height', getHeroHeight() + 'px'); // Set hero to fill page height
+}
 
 // Scroll to target
 function scrollToTarget(D)
@@ -51,8 +70,7 @@ $(function()
 // Animate when visable
 function animateWhenVisable()
 {
-	$('.animated').removeClass('animated').addClass('hideMe'); // replace animated with hide
-	
+	hideAll(); // Hide all animation elements
 	inViewCheck(); // Initail check on page load
 	
 	$(window).scroll(function()
@@ -61,6 +79,18 @@ function animateWhenVisable()
 		scrollToTopView(); // ScrollToTop button visability toggle
 	});		
 };
+
+// Hide all animation elements
+function hideAll()
+{
+	$('.animated').each(function(i)
+	{	
+		if(!$(this).closest('.hero').length) // Dont hide hero object
+		{
+			$(this).removeClass('animated').addClass('hideMe');
+		}
+	});
+}
 
 // Check if object is inView
 function inViewCheck()
@@ -74,18 +104,9 @@ function inViewCheck()
 		
 		if (a < b) 
 		{	
-			
 			var objectClass = target.attr('class').replace('hideMe' , 'animated');
-			
-			if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) // If Firefox
-			{
-				target.css('visibility','hidden').removeAttr('class');
-				setTimeout(function(){target.attr('class',objectClass).css('visibility','visable');},0.1);
-			}
-			else
-			{
-				target.attr('class',objectClass)
-			}			
+			target.css('visibility','hidden').removeAttr('class');
+			setTimeout(function(){target.attr('class',objectClass).css('visibility','visable');},0.01);				
 		}
 	});
 };

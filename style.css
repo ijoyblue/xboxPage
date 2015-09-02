@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------------------*/
-/*	    
+/*	    My Site
 /*      Built with Blocs
 /*-----------------------------------------------------------------------------------*/
 
@@ -9,6 +9,7 @@ body{
     background:#FFF;
     overflow-x:hidden;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 a:hover{text-decoration: none; cursor:pointer;}
 
@@ -18,13 +19,11 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 a{
 	color:#060606!important;
 }
-
  a:hover{
 	color:#060606!important;
 	text-decoration:none;
 	cursor:pointer;
 }
-
 
 
 
@@ -62,7 +61,7 @@ a{
 /* Sizes */
 
 .bloc-xl{
-	padding:200px 50px;
+	padding:150px 50px;
 }
 .bloc-lg{
 	padding:100px 50px;
@@ -143,6 +142,31 @@ a{
 	color:rgba(255,255,255,1);
 	border-color:rgba(255,255,255,1);
 }
+.d-bloc .panel{
+	color:rgba(0,0,0,.5);
+}
+.d-bloc .panel button:hover{
+	color:rgba(0,0,0,.7);
+}
+.d-bloc .panel h1,.d-bloc .panel h2, .d-bloc .panel h3, .d-bloc .panel h4, .d-bloc .panel h5, .d-bloc .panel h6, .d-bloc .ico{
+	color:rgba(0,0,0,.7);
+}
+.d-bloc .panel icon{
+	border-color:rgba(0,0,0,.7);
+}
+.d-bloc .panel .divider-h span{
+	border-color:rgba(0,0,0,.1);
+}
+.d-bloc .panel a{
+	color:rgba(0,0,0,.6);
+}
+.d-bloc .panel a:hover{
+	color:rgba(0,0,0,1);
+}
+.d-bloc .panel .btn-wire, .d-bloc .panel .btn-wire:hover{
+	color:rgba(0,0,0,.7);
+	border-color:rgba(0,0,0,.3);
+}
 
 
 /* Light theme */
@@ -182,15 +206,8 @@ a{
 	margin-top:80px;
 }
 
+/* Bloc text custom styling */
 
-/* Custom bloc styling */
-
-#nav-bloc,#yimi1,#bloc-3,#bloc-4,#bloc-5,#bloc-6,#bloc-7,#bloc-8,#bloc-9,#bloc-10,#bloc-11,#yimi-group,#yimi-our,#bloc-14,#bloc-15,#bloc-16,#bloc-17{
-	background-color:#ffffff;
-}
-#hero-bloc{
-	background-color:#060606;
-}
 #hero-bloc h1{
 	font-size:50px;
 }
@@ -198,20 +215,12 @@ a{
 	font-size:30px;
 }
 
-/* Bloc image backgrounds */
-
-.bg-cornfield{
-	background-image:url("img/cornfield.jpg");
-}
-.bg-cornfield{
-	background-image:url('img/cornfield.jpg');
-}
-
 /* = NavBar
 -------------------------------------------------------------- */
 
 .navbar{
 	margin-bottom: 0;
+	z-index:1;
 }
 .navbar-brand{
 	height:auto;
@@ -232,11 +241,15 @@ a{
 	padding-top: 2px;
 	margin-right: -16px;
 	float:right;
+	z-index:1;
 }
 .nav > li{
 	float:left;
 	margin-top:4px;
 	font-size:16px;
+}
+.navbar-nav .open .dropdown-menu > li > a{
+	text-align: inherit;
 }
 .nav > li a:hover, .nav > li a:focus{
 	background:transparent;
@@ -272,17 +285,44 @@ a{
 		left:20px;
 		right:0;
 	}
+	.nav-center{
+		text-align:center;
+	}
+	.nav-center .navbar-header{
+		width:100%;
+	}
+	.nav-center .navbar-header, .nav-center .navbar-brand, .nav-center .nav > li{
+		float: none;
+		display:inline-block;
+	}
+	.nav-center .site-navigation{
+		position:relative;
+		width:100%;
+		margin-top:20px;
+	}
+}
+.nav > li > .dropdown a{
+	background: none!important;
+	display: block;
+	padding: 15px 15px;
+}
+
+nav .caret{
+	margin: 0 5px;
 }
 
 /* = Hero
 -------------------------------------------------------------- */
 
 .hero{
-	padding-top:0;
+	padding:150px 0;
+	position:relative;
+	display:inline-table;
 }
 .hero-nav{
 	position:absolute;
 	margin: 0 auto;
+	top:0;
 	left:0;
 	right:0;
 }
@@ -290,6 +330,7 @@ a{
 	width:100%;
 	height: 100%;
 	display: table;
+	table-layout: fixed;
 }
 .v-center .vc-content{
 	display: table-cell;
@@ -321,6 +362,9 @@ a{
 /* = Bric adjustment margins
 -------------------------------------------------------------- */
 
+.mg-clear{
+	margin:0;
+}
 .mg-sm{
 	margin-top:10px;
 	margin-bottom:5px;
@@ -389,43 +433,13 @@ button{
 	width:100%;
 	text-align: left;
 }
-
-/* Button colour styles */
-
-.btn-c-2{
-	background:#ffffff;
-	color:rgba(0,0,0,.5)!important;
-}
-.btn-c-2:hover{
-	background:#cccccc;
-	color:rgba(0,0,0,.5)!important;
-}
-.wire-btn-c-2{
-	color:#ffffff!important;
-	border-color:#ffffff!important;
-}
-
-/* Link colour styles */
-
-.ltc-1{
-	color:#060606!important;
-}
-.ltc-1:hover{
-	color:#050505!important;
-}
-.ltc-2{
-	color:#ffffff!important;
-}
-.ltc-2:hover{
-	color:#cccccc!important;
-}
-
+.dropdown a .caret{
+	margin:0 0 0 5px}
 /* = Icons
 -------------------------------------------------------------- */
 .icon-sm{
 	font-size:18px!important;
 }
-
 
 /*  Rounded Image */
 .img-rd{
@@ -444,6 +458,20 @@ button{
 	text-shadow:0 2px 5px rgba(0,0,0,.5);
 }
 
+
+.panel-sq, .panel-sq .panel-heading, .panel-sq .panel-footer{
+	border-radius:0;
+}
+.panel-rd{
+	border-radius:30px;
+}
+.panel-rd .panel-heading{
+	border-radius:29px 29px 0 0;
+}
+.panel-rd .panel-footer{
+	border-radius:0 0 29px 29px;
+}
+
 /* = Dividers
 -------------------------------------------------------------- */
 .divider-h{
@@ -456,6 +484,9 @@ button{
 .divider-half{
 	width: 50%;
 	margin: 0 auto;
+}
+.dropdown-menu .divider-h,.dropdown-menu .divider-half{
+	padding:0;
 }
 
 
@@ -479,9 +510,72 @@ iframe{
 }
 
 
+/* ScrollToTop button */
+
+.scrollToTop{
+	width:40px;
+	height:40px;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	opacity: 0;
+	z-index: 500;
+	transition: all .3s ease-in-out;
+}
+.scrollToTop span{
+	margin-top: 6px;
+}
+.showScrollTop{
+	font-size: 14px;
+	opacity: 1;
+}
+
+/* = Custom Colour Styling
+-------------------------------------------------------------- */
+
+/* Background colour styles */
+
+.bgc-white{
+	background-color:#ffffff;
+}
+.bgc-black{
+	background-color:#060606;
+}
+/* Button colour styles */
+
+.wire-btn-white{
+	color:#ffffff!important;
+	border-color:#ffffff!important;
+}
+/* Link colour styles */
+
+.ltc-black{
+	color:#060606!important;
+}
+.ltc-black:hover{
+	color:#050505!important;
+}
+
+/* Bloc image backgrounds */
+
+.bg-cornfield{
+	background-image:url("img/cornfield.jpg");
+}
+.bg-cornfield{
+	background-image:url("img/cornfield.jpg");
+}
+
+
 
 /* = Mobile adjustments 
 -------------------------------------------------------------- */
+@media (max-width: 1024px)
+{
+    .bloc{
+        padding-left: 20px; 
+        padding-right: 20px;  
+    }
+}
 @media (max-width: 768px)
 {
     .container{width:100%;}
@@ -542,6 +636,7 @@ iframe{
         border-bottom:1px solid rgba(0,0,0,.1);
         background:rgba(0,0,0,.05);
         text-align: left;
+        padding-left:15px;
         width:100%;
     }
     .nav > li:hover{
@@ -552,6 +647,9 @@ iframe{
     }
     #hero-bloc .navbar .nav a{
         color:rgba(255,255,255,.6);
+    }
+    .hero{
+        padding:50px 0;
     }
     .hero-nav{
         left:-1px;
@@ -586,7 +684,7 @@ iframe{
 	   padding-left: 10px;
 	   padding-right: 10px;
     }
-    .bloc-xl,.bloc-lg{
+    .bloc-xxl,.bloc-xl,.bloc-lg{
         padding: 40px 0;
     }
     .bloc-sm,.bloc-md{
@@ -598,6 +696,15 @@ iframe{
     }
     .btn-dwn{
        display:none; 
+    }
+    .voffset{
+        margin-top:5px;
+    }
+    .voffset-md{
+        margin-top:20px;
+    }
+    .voffset-lg{
+        margin-top:30px;
     }
     form{
         padding:5px;
